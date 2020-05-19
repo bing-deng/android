@@ -60,7 +60,15 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,DisplayMessageActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE,text)
         }
-        startActivity(intent)
+//        startActivity(intent)
+        startActivityForResult(intent,2)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        val result = data?.getStringExtra("result")
+        println("获取上个页面值:$result")
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

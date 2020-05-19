@@ -1,5 +1,6 @@
 package com.example.firstapp.One
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +25,11 @@ class DisplayMessageActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+
+
     }
+
 
 
         override fun onStart() {
@@ -33,6 +38,11 @@ class DisplayMessageActivity : AppCompatActivity() {
 
         override fun onResume() {
             super.onResume()
+
+            val intent = Intent()
+            intent.putExtra("result","done")
+            this.setResult(2,intent)
+//            this.finish()
         }
 
         override fun onPause() {
