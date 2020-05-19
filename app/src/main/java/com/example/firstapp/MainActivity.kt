@@ -1,12 +1,21 @@
 package com.example.firstapp
 
+import android.content.Intent
 import android.os.Bundle
+
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import com.example.firstapp.One.DisplayMessageActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
+
+
+const val EXTRA_MESSAGE = "com.example.firstApp.MESSAGE"
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +28,39 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
+
+    fun sendMessage(view:View){
+
+        val  text = editText.text.toString();
+
+
+//        val intent = Intent(this,DisplayMessageActivity::class.java)
+        val intent = Intent(this,DisplayMessageActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE,text)
+        }
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
