@@ -28,6 +28,18 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+//        button.setOnClickListener{
+//            val  text = editText.text.toString();
+//
+//
+////        val intent = Intent(this,DisplayMessageActivity::class.java)
+//            val intent = Intent(this,DisplayMessageActivity::class.java).apply {
+//                putExtra(EXTRA_MESSAGE,text)
+//            }
+////        startActivity(intent)
+//            startActivityForResult(intent,2)
+//
+//        }
 
     }
 
