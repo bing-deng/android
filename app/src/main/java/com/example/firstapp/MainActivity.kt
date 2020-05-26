@@ -69,4 +69,8 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    fun musicList(view: View){
+        startActivity(Intent(this,MusicList::class.java))
+    }
 }
