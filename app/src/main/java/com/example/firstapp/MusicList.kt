@@ -78,11 +78,10 @@ class MusicList : AppCompatActivity() {
                         json, object : TypeToken<List<SongItem?>?>() {}.type
                     ) //数组
 
-
-                    viewAdapter.myDataset = dataSource
-
-
-
+                    this@MusicList.runOnUiThread(java.lang.Runnable {
+                        viewAdapter.myDataset = dataSource
+                        viewAdapter!!.notifyDataSetChanged()
+                    })
 
                 }
             }
