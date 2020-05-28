@@ -28,7 +28,7 @@ class MusicList : AppCompatActivity() {
         setContentView(R.layout.activity_music_list)
 
         viewManager = LinearLayoutManager(this)
-        val songItem = SongItem("Girls like you", "detail", "https://abc.png")
+        val songItem = SongItem("Girls like you", "detail", "https://m.media-amazon.com/images/M/MV5BZmI3Njc2OGYtZTMyMC00NjNhLWJjMzItYmZmNDdlOTVmZjQ1XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_.jpg")
         val myDataset = arrayListOf(songItem)
         viewAdapter = MyAdapter(myDataset)
 

@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.music_item.view.*
 import kotlinx.android.synthetic.main.my_text_view.view.*
 
@@ -33,11 +34,9 @@ class MyAdapter( var myDataset: ArrayList<SongItem>) : RecyclerView.Adapter<MyAd
         val songItem  = myDataset[position]
         holder.textView.title1.text = songItem.title
         holder.textView.detail1.text = songItem.detail
+        val picasso = Picasso.get()
+        picasso.load(songItem.image).into(holder.textView.imageView)
 
-//        Picasso
-//            .with(this)
-//            .load(songItem.image)
-//            .into(holder.textView.imageButton);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
