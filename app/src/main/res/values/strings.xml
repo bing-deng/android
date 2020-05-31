@@ -5,6 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
 
+    <string name="share_preference_01">share_preference_01</string>
+    <string name="user_pwd">user_pwd</string>
+    <string name="user_pwd2">user_pwd2</string>
+
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
