@@ -73,4 +73,8 @@ class MainActivity : AppCompatActivity() {
     fun musicList(view: View){
         startActivity(Intent(this,MusicList::class.java))
     }
+    //
+    fun motionView(view: View){
+        startActivity(Intent(this,MotionActivity::class.java))
+    }
 }
