@@ -9,10 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.security.crypto.MasterKeys
-import java.io.BufferedReader
-import java.io.File
-import java.io.InputStreamReader
 
 
 const val EXTRA_MESSAGE = "com.example.firstApp.MESSAGE"

@@ -1,5 +1,6 @@
 package com.example.firstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
@@ -18,6 +19,11 @@ class SignActivity : AppCompatActivity() {
     fun back(view: View){
 
         finish()
+    }
+
+    fun webview(view:View){
+
+        startActivity(Intent(this,WebActivity::class.java))
     }
 
 }
